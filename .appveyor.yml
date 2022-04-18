@@ -18,6 +18,7 @@ install:
   # Download bazelisk from github
   - ps: Invoke-Webrequest "https://github.com/bazelbuild/bazelisk/releases/download/v$env:BAZELISK_VERSION/$env:BAZELISK_BINARY" -OutFile "$env:BAZELISK_BINARY"
   - sh: chmod +x $env:BAZELISK_BINARY
+  - SH: pwd
 
 build_script:
   - cmd: bazelisk-linux-amd64 --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
