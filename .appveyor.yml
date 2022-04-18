@@ -1,3 +1,6 @@
+image:
+  - Ubuntu2004
+
 environment:
   BAZELISK_VERSION: 1.10.1
   BAZELISK_BINARY: bazelisk-linux-amd64
@@ -18,4 +21,4 @@ install:
   - sh: chmod +x $HOME/bin/bazel
 
 build_script:
-  - cmd: bazelisk-linux-amd64 build --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
+  - cmd: "$env:HOME/bin/$env:BAZEL_BINARY" --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
