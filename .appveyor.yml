@@ -1,6 +1,6 @@
 environment:
   BAZELISK_VERSION: 1.10.1
-  BAZEL_BINARY: bazelisk-linux-amd64
+  BAZELISK_BINARY: bazelisk-linux-amd64
 
 install:
   # Create a bin folder where bazelisk will be located and add it in the path
