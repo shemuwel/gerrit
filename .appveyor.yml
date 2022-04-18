@@ -17,9 +17,7 @@ install:
       }
   # Download bazelisk from github
   - ps: Invoke-Webrequest "https://github.com/bazelbuild/bazelisk/releases/download/v$env:BAZELISK_VERSION/$env:BAZELISK_BINARY" -OutFile "$env:BAZELISK_BINARY"
-  # Renaming bazelisk to bazel is quite a common practice, people got used to run bazel build and not bazelisk build
-  - ps: Copy-Item -Path "$env:BAZELISK_BINARY" -Destination "$env:HOME\bin\$env:BAZEL_BINARY" -Recurse
-  - sh: chmod +x $HOME/bin/bazel
+  - sh: chmod +x $env:BAZELISK_BINARY
 
 build_script:
-  - cmd: "$env:HOME/bin/$env:BAZEL_BINARY" --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
+  - cmd: bazelisk-linux-amd64 --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
