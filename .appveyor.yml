@@ -18,4 +18,4 @@ install:
   - sh: chmod +x $HOME/bin/bazel
 
 build_script:
-  - cmd: bazel build --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
+  - cmd: bazelisk-linux-amd64 build --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
