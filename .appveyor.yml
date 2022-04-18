@@ -1,0 +1,17 @@
+install:
+  # Create a bin folder where bazelisk will be located and add it in the path
+  - ps: New-Item -Type dir "$env:HOME\bin"
+  - ps: |
+      if ($isLinux) {
+        $env:PATH += ":$env:HOME/bin"
+      } else {
+        $Env:Path += ";$env:HOME/bin"
+      }
+  # Download bazelisk from github
+  - ps: Invoke-Webrequest "https://github.com/bazelbuild/bazelisk/releases/download/v$env:BAZELISK_VERSION/$env:BAZELISK_BINARY" -OutFile "$env:BAZELISK_BINARY"
+  # Renaming bazelisk to bazel is quite a common practice, people got used to run bazel build and not bazelisk build
+  - ps: Copy-Item -Path "$env:BAZELISK_BINARY" -Destination "$env:HOME\bin\$env:BAZEL_BINARY" -Recurse
+  - sh: chmod +x $HOME/bin/bazel
+
+build_script:
+  - cmd: bazel build --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
