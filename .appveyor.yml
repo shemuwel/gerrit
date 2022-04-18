@@ -21,4 +21,4 @@ install:
   - sh: chmod +x $HOME/bin/bazel
 
 build_script:
-  - cmd: $HOME/bin/bazel --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
+  - cmd: cd $HOME/projects/gerrit & $HOME/bin/bazel --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
