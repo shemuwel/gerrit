@@ -22,5 +22,6 @@ install:
 
 build_script:
   - sh: cd $HOME/projects/gerrit
+  - sh: git submodule update --init
   - sh: pwd
   - sh: $HOME/bin/bazel build :release
