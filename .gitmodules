@@ -1,6 +1,6 @@
 [submodule "modules/jgit"]
 	path = modules/jgit
-	url = ../jgit
+	url = https://github.com/GerritCodeReview/gerrit.git
 
 [submodule "plugins/codemirror-editor"]
 	path = plugins/codemirror-editor
@@ -9,7 +9,7 @@
 
 [submodule "plugins/commit-message-length-validator"]
 	path = plugins/commit-message-length-validator
-	url = ../plugins/commit-message-length-validator
+	url = https://github.com/GerritCodeReview/gerrit.git
 	branch = .
 
 [submodule "plugins/delete-project"]
