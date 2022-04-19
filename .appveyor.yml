@@ -1,8 +1,8 @@
-image:
-  - Ubuntu2004
-
 clone_script:
   - sh: git clone --recurse-submodules https://github.com/shemuwel/gerrit.git
+
+image:
+  - Ubuntu2004
 
 environment:
   BAZELISK_VERSION: 1.10.1
