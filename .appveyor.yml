@@ -23,4 +23,4 @@ install:
 build_script:
   - sh: cd $HOME/projects/gerrit
   - sh: pwd
-  - sh: $HOME/bin/bazel build --java_toolchain=//tools:error_prone_warnings_toolchain_java11 :release
+  - sh: $HOME/bin/bazel build :release
