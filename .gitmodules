@@ -34,7 +34,7 @@
 
 [submodule "plugins/plugin-manager"]
 	path = plugins/plugin-manager
-	url = https://github.com/GerritCodeReview/plugins_hooks.git
+	url = https://github.com/GerritCodeReview/plugins_plugin-manager.git
 	branch = .
 
 [submodule "plugins/replication"]
