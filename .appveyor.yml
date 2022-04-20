@@ -13,6 +13,9 @@ environment:
   BAZEL_BINARY: bazel
   BAZELISK_BINARY: bazelisk-linux-amd64
 
+artifacts:
+  - path: $HOME/gerrit/bazel-bin.war
+
 install:
   # Create a bin folder where bazelisk will be located and add it in the path
   - ps: New-Item -Type dir "$env:HOME\bin"
@@ -30,3 +33,4 @@ install:
 build_script:
   - sh: cd gerrit
   - sh: $HOME/bin/bazel build :release
+  - sh: ls -la
