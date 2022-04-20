@@ -28,5 +28,5 @@ install:
   - sh: chmod +x $HOME/bin/bazel
 
 build_script:
-  - sh: ls -la
+  - sh: cd gerrit
   - sh: $HOME/bin/bazel build :release
