@@ -1,9 +1,6 @@
 clone_script:
   - sh: git clone --recurse-submodules https://github.com/shemuwel/gerrit.git
-
-branches:
-  only:
-    - stable-3.5
+  - sh: git checkout stable-3.5
 
 image:
   - Ubuntu2004
