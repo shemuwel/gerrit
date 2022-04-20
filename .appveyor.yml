@@ -1,0 +1,34 @@
+clone_script:
+  - sh: git clone --recurse-submodules https://github.com/shemuwel/gerrit.git
+
+branches:
+  only:
+    - stable-3.5
+
+image:
+  - Ubuntu2004
+
+environment:
+  BAZELISK_VERSION: 1.10.1
+  BAZEL_BINARY: bazel
+  BAZELISK_BINARY: bazelisk-linux-amd64
+
+install:
+  # Create a bin folder where bazelisk will be located and add it in the path
+  - ps: New-Item -Type dir "$env:HOME\bin"
+  - ps: |
+      if ($isLinux) {
+        $env:PATH += ":$env:HOME/bin"
+      } else {
+        $Env:Path += ";$env:HOME/bin"
+      }
+  # Download bazelisk from github
+  - ps: Invoke-Webrequest "https://github.com/bazelbuild/bazelisk/releases/download/v$env:BAZELISK_VERSION/$env:BAZELISK_BINARY" -OutFile "$env:BAZELISK_BINARY"
+  - ps: Copy-Item -Path "$env:BAZELISK_BINARY" -Destination "$env:HOME\bin\$env:BAZEL_BINARY" -Recurse
+  - sh: chmod +x $HOME/bin/bazel
+
+build_script:
+  - sh: cd $HOME/projects/gerrit
+  - sh: git submodule update --init
+  - sh: pwd
+  - sh: $HOME/bin/bazel build :release
