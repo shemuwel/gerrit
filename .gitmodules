@@ -4,60 +4,60 @@
 
 [submodule "plugins/codemirror-editor"]
 	path = plugins/codemirror-editor
-	url = https://github.com/GerritCodeReview/codemirror-editor.git
+	url = https://github.com/GerritCodeReview/plugins_codemirror-editor.git
 	branch = .
 
 [submodule "plugins/commit-message-length-validator"]
 	path = plugins/commit-message-length-validator
-	url = https://github.com/GerritCodeReview/commit-message-length-validator.git
+	url = https://github.com/GerritCodeReview/plugins_commit-message-length-validator.git
 	branch = .
 
 [submodule "plugins/delete-project"]
 	path = plugins/delete-project
-	url = https://github.com/GerritCodeReview/delete-project.git
+	url = https://github.com/GerritCodeReview/plugins_delete-project.git
 	branch = .
 
 [submodule "plugins/download-commands"]
 	path = plugins/download-commands
-	url = https://github.com/GerritCodeReview/download-commands.git
+	url = https://github.com/GerritCodeReview/plugins_download-commands.git
 	branch = .
 
 [submodule "plugins/gitiles"]
 	path = plugins/gitiles
-	url = https://github.com/GerritCodeReview/gitiles.git
+	url = https://github.com/GerritCodeReview/plugins_gitiles.git
 	branch = .
 
 [submodule "plugins/hooks"]
 	path = plugins/hooks
-	url = https://github.com/GerritCodeReview/hooks.git
+	url = https://github.com/GerritCodeReview/plugins_hooks.git
 	branch = .
 
 [submodule "plugins/plugin-manager"]
 	path = plugins/plugin-manager
-	url = https://github.com/GerritCodeReview/hooks.git
+	url = https://github.com/GerritCodeReview/plugins_hooks.git
 	branch = .
 
 [submodule "plugins/replication"]
 	path = plugins/replication
-	url = https://github.com/GerritCodeReview/replication.git
+	url = https://github.com/GerritCodeReview/plugins_replication.git
 	branch = .
 
 [submodule "plugins/reviewnotes"]
 	path = plugins/reviewnotes
-	url = https://github.com/GerritCodeReview/reviewnotes.git
+	url = https://github.com/GerritCodeReview/plugins_reviewnotes.git
 	branch = .
 
 [submodule "plugins/singleusergroup"]
 	path = plugins/singleusergroup
-	url = https://github.com/GerritCodeReview/singleusergroup.git
+	url = https://github.com/GerritCodeReview/plugins_singleusergroup.git
 	branch = .
 
 [submodule "plugins/webhooks"]
 	path = plugins/webhooks
-	url = https://github.com/GerritCodeReview/webhooks.git
+	url = https://github.com/GerritCodeReview/plugins_webhooks.git
 	branch = .
 
 [submodule "polymer-bridges"]
 	path = polymer-bridges
-	url = https://github.com/GerritCodeReview/bridges.git
+	url = https://github.com/GerritCodeReview/polymer-bridges.git
 	branch = .
