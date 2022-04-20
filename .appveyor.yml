@@ -14,7 +14,7 @@ environment:
   BAZELISK_BINARY: bazelisk-linux-amd64
 
 artifacts:
-  - path: $HOME/gerrit/bazel-bin.war
+  - path: /bazel-bin/release.war
 
 install:
   # Create a bin folder where bazelisk will be located and add it in the path
